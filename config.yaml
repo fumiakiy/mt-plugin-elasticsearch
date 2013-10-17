@@ -1,0 +1,12 @@
+name: Put to elasticsearch
+id: ElasticSearch
+key: ElasticSearch
+description: <MT_TRANS phrase="Post published entry to elastic search">
+author_name: 'Fumiaki Yoshimatsu'
+author_link: http://www.luckypines.com/
+l10n_class: ElasticSearch::L10
+version: 0.1
+
+callbacks:
+    MT::Entry::post_save: $ElasticSearch::ElasticSearch::Entry::entry_post_save
+
